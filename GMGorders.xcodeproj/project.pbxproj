@@ -28,6 +28,8 @@
 		38A7CED42A28BFF800E0E2B1 /* TransactionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CED22A28BFF800E0E2B1 /* TransactionItemCell.xib */; };
 		38A7CED62A28CB2F00E0E2B1 /* GMGDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */; };
 		38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED72A28D1AB00E0E2B1 /* Helper.swift */; };
+		38A7CEDA2A28D66500E0E2B1 /* TransactionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED92A28D66500E0E2B1 /* TransactionDetailVC.swift */; };
+		38A7CEDC2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEDB2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		38A7CED22A28BFF800E0E2B1 /* TransactionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionItemCell.xib; sourceTree = "<group>"; };
 		38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMGDateFormatter.swift; sourceTree = "<group>"; };
 		38A7CED72A28D1AB00E0E2B1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		38A7CED92A28D66500E0E2B1 /* TransactionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailVC.swift; sourceTree = "<group>"; };
+		38A7CEDB2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +162,8 @@
 		38A7CEAF2A287BDC00E0E2B1 /* TransactionDetail */ = {
 			isa = PBXGroup;
 			children = (
-				38A7CEB02A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB12A287BDC00E0E2B1 /* Model */,
+				38A7CEB02A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB22A287BDC00E0E2B1 /* Views */,
 			);
 			path = TransactionDetail;
@@ -168,6 +172,7 @@
 		38A7CEB02A287BDC00E0E2B1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CEDB2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 		38A7CEB22A287BDC00E0E2B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CED92A28D66500E0E2B1 /* TransactionDetailVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,10 +398,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A7CEDA2A28D66500E0E2B1 /* TransactionDetailVC.swift in Sources */,
 				38A7CEBB2A287D9800E0E2B1 /* TransactionListModel.swift in Sources */,
 				38A7CECC2A288E2100E0E2B1 /* AppStyles.swift in Sources */,
 				38A7CED62A28CB2F00E0E2B1 /* GMGDateFormatter.swift in Sources */,
 				38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */,
+				38A7CEDC2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift in Sources */,
 				38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */,
 				38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */,
 				38A7CEBE2A287E9F00E0E2B1 /* NetworkManager.swift in Sources */,

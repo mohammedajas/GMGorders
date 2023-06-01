@@ -9,12 +9,6 @@ import UIKit
 import Combine
 
 
-protocol TransactionListVCProtocol : AnyObject {
-    func showProgess()
-    func hideProgress()
-}
-
-
 class TransactionListVC: UIViewController {
     private var viewModel: TransactionListViewModel!
     private var transactions : [Transaction] = []
@@ -24,13 +18,14 @@ class TransactionListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.dataSource = self
+            tableView.delegate = self
             tableView.registerCell(TransactionItemCell.self)
         }
     }
   
-    init?(coder:NSCoder,viewModel: TransactionListViewModel!) {
+    init(coder:NSCoder,viewModel: TransactionListViewModel!) {
         self.viewModel = viewModel
-        super.init(coder: coder)
+        super.init(coder: coder)!
     }
     
     required init?(coder: NSCoder) {
@@ -47,6 +42,7 @@ class TransactionListVC: UIViewController {
     
     private func bindViewModel(){
         viewModel.getTransactionList()
+        
         viewModel.$transactions.receive(on: DispatchQueue.main)
             .sink { completion in
             switch completion{
@@ -89,16 +85,19 @@ extension TransactionListVC : UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let transactionDetailVC = Helper.getMainStoryBoard.instantiateViewController(identifier: TransactionDetailVC.typeName, creator: { coder in
+            TransactionDetailVC(coder: coder, viewModel: TransactionDetailViewModel(transaction: self.transactions[indexPath.row]))})
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.navigationController?.pushViewController(transactionDetailVC, animated: true)
+        }
+    }
+    
     
 }
 
-
-extension TransactionListVC : TransactionListVCProtocol{
-    func showProgess() {
-        Helper.showLoader(viewController:self)
-    }
-    
-    func hideProgress() {
-        Helper.hideLoader(viewController:self )
-    }
-}

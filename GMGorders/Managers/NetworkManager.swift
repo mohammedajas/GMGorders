@@ -21,7 +21,7 @@ class NetworkManager {
     private let transactionsEndpoint = "https://api.gmg.com/transactions"
 #endif
     let mockEnabled = true
-    private let mockJson = "GMGTransactions"
+    private let mockJsonfileName = "GMGTransactions"
     private var cancellables = Set<AnyCancellable>()
     private init() {
         
@@ -45,8 +45,8 @@ class NetworkManager {
             }
         
             if self.mockEnabled {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    if let mockTransactions = self.mockJson.readLocalFile(),
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    if let mockTransactions = self.mockJsonfileName.readLocalFile(),
                        let mockModel = mockTransactions.jsonParser(type: T.self){
                         promise(.success(mockModel))
                     }else{

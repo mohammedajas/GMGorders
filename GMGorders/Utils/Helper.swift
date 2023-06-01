@@ -21,4 +21,10 @@ final class Helper{
     static func hideLoader(viewController : UIViewController){
         viewController.dismiss(animated: true)
     }
+    
+    static var getMainStoryBoard  : UIStoryboard{
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+      return mainStoryBoard
+    }
+
 }

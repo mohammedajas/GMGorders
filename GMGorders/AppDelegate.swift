@@ -11,7 +11,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate{
     
     private func homeViewController(){
-        let transactionListVC = mainStoryBoard.instantiateViewController(identifier: "TransactionListVC", creator: { coder in
+        let transactionListVC = Helper.getMainStoryBoard.instantiateViewController(identifier: TransactionListVC.typeName, creator: { coder in
             TransactionListVC(coder: coder, viewModel: TransactionListViewModel())})
                 let rootVC = UINavigationController(rootViewController: transactionListVC)
                 makeViewControllerRoot(rootVC)
