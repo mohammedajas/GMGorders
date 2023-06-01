@@ -8,14 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		38A7CE802A287BAF00E0E2B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CE7F2A287BAF00E0E2B1 /* AppDelegate.swift */; };
-		38A7CE822A287BAF00E0E2B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CE812A287BAF00E0E2B1 /* SceneDelegate.swift */; };
-		38A7CE842A287BAF00E0E2B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CE832A287BAF00E0E2B1 /* ViewController.swift */; };
+		38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CE832A287BAF00E0E2B1 /* TransactionListVC.swift */; };
 		38A7CE872A287BAF00E0E2B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CE852A287BAF00E0E2B1 /* Main.storyboard */; };
 		38A7CE892A287BB100E0E2B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CE882A287BB100E0E2B1 /* Assets.xcassets */; };
 		38A7CE8C2A287BB100E0E2B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CE8A2A287BB100E0E2B1 /* LaunchScreen.storyboard */; };
 		38A7CE972A287BB200E0E2B1 /* GMGordersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CE962A287BB200E0E2B1 /* GMGordersTests.swift */; };
 		38A7CEA12A287BB200E0E2B1 /* GMGordersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEA02A287BB200E0E2B1 /* GMGordersUITests.swift */; };
 		38A7CEA32A287BB200E0E2B1 /* GMGordersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEA22A287BB200E0E2B1 /* GMGordersUITestsLaunchTests.swift */; };
+		38A7CEB92A287CFD00E0E2B1 /* GMGTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CEB82A287CFD00E0E2B1 /* GMGTransactions.json */; };
+		38A7CEBB2A287D9800E0E2B1 /* TransactionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEBA2A287D9800E0E2B1 /* TransactionListModel.swift */; };
+		38A7CEBE2A287E9F00E0E2B1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEBD2A287E9F00E0E2B1 /* NetworkManager.swift */; };
+		38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEC02A28878F00E0E2B1 /* Extensions.swift */; };
+		38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEC22A28898F00E0E2B1 /* NetworkService.swift */; };
+		38A7CEC72A288C4A00E0E2B1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEC62A288C4A00E0E2B1 /* Reachability.swift */; };
+		38A7CECA2A288CE300E0E2B1 /* InternetConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */; };
+		38A7CECC2A288E2100E0E2B1 /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */; };
+		38A7CECE2A289F4100E0E2B1 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CECD2A289F4100E0E2B1 /* TransactionListViewModel.swift */; };
+		38A7CED32A28BFF800E0E2B1 /* TransactionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED12A28BFF800E0E2B1 /* TransactionItemCell.swift */; };
+		38A7CED42A28BFF800E0E2B1 /* TransactionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A7CED22A28BFF800E0E2B1 /* TransactionItemCell.xib */; };
+		38A7CED62A28CB2F00E0E2B1 /* GMGDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */; };
+		38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED72A28D1AB00E0E2B1 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +50,7 @@
 /* Begin PBXFileReference section */
 		38A7CE7C2A287BAF00E0E2B1 /* GMGorders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMGorders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7CE7F2A287BAF00E0E2B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38A7CE812A287BAF00E0E2B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38A7CE832A287BAF00E0E2B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38A7CE832A287BAF00E0E2B1 /* TransactionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListVC.swift; sourceTree = "<group>"; };
 		38A7CE862A287BAF00E0E2B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38A7CE882A287BB100E0E2B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A7CE8B2A287BB100E0E2B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +60,19 @@
 		38A7CE9C2A287BB200E0E2B1 /* GMGordersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMGordersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A7CEA02A287BB200E0E2B1 /* GMGordersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMGordersUITests.swift; sourceTree = "<group>"; };
 		38A7CEA22A287BB200E0E2B1 /* GMGordersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMGordersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		38A7CEB82A287CFD00E0E2B1 /* GMGTransactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GMGTransactions.json; sourceTree = "<group>"; };
+		38A7CEBA2A287D9800E0E2B1 /* TransactionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModel.swift; sourceTree = "<group>"; };
+		38A7CEBD2A287E9F00E0E2B1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		38A7CEC02A28878F00E0E2B1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		38A7CEC22A28898F00E0E2B1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		38A7CEC62A288C4A00E0E2B1 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionView.swift; sourceTree = "<group>"; };
+		38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
+		38A7CECD2A289F4100E0E2B1 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		38A7CED12A28BFF800E0E2B1 /* TransactionItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemCell.swift; sourceTree = "<group>"; };
+		38A7CED22A28BFF800E0E2B1 /* TransactionItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionItemCell.xib; sourceTree = "<group>"; };
+		38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMGDateFormatter.swift; sourceTree = "<group>"; };
+		38A7CED72A28D1AB00E0E2B1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +123,13 @@
 		38A7CE7E2A287BAF00E0E2B1 /* GMGorders */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CEBF2A28877600E0E2B1 /* Utils */,
+				38A7CEBC2A287E8500E0E2B1 /* Managers */,
+				38A7CEB72A287CEB00E0E2B1 /* MockResources */,
+				38A7CEC82A288CAD00E0E2B1 /* SharedViews */,
 				38A7CEAF2A287BDC00E0E2B1 /* TransactionDetail */,
 				38A7CEB32A287BDC00E0E2B1 /* TransactionsList */,
 				38A7CE7F2A287BAF00E0E2B1 /* AppDelegate.swift */,
-				38A7CE812A287BAF00E0E2B1 /* SceneDelegate.swift */,
-				38A7CE832A287BAF00E0E2B1 /* ViewController.swift */,
 				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CE882A287BB100E0E2B1 /* Assets.xcassets */,
 				38A7CE8A2A287BB100E0E2B1 /* LaunchScreen.storyboard */,
@@ -163,8 +189,8 @@
 		38A7CEB32A287BDC00E0E2B1 /* TransactionsList */ = {
 			isa = PBXGroup;
 			children = (
-				38A7CEB42A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB52A287BDC00E0E2B1 /* Model */,
+				38A7CEB42A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB62A287BDC00E0E2B1 /* Views */,
 			);
 			path = TransactionsList;
@@ -173,6 +199,7 @@
 		38A7CEB42A287BDC00E0E2B1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CECD2A289F4100E0E2B1 /* TransactionListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +207,7 @@
 		38A7CEB52A287BDC00E0E2B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CEBA2A287D9800E0E2B1 /* TransactionListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,8 +215,48 @@
 		38A7CEB62A287BDC00E0E2B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CE832A287BAF00E0E2B1 /* TransactionListVC.swift */,
+				38A7CED12A28BFF800E0E2B1 /* TransactionItemCell.swift */,
+				38A7CED22A28BFF800E0E2B1 /* TransactionItemCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		38A7CEB72A287CEB00E0E2B1 /* MockResources */ = {
+			isa = PBXGroup;
+			children = (
+				38A7CEB82A287CFD00E0E2B1 /* GMGTransactions.json */,
+			);
+			path = MockResources;
+			sourceTree = "<group>";
+		};
+		38A7CEBC2A287E8500E0E2B1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				38A7CEBD2A287E9F00E0E2B1 /* NetworkManager.swift */,
+				38A7CEC62A288C4A00E0E2B1 /* Reachability.swift */,
+				38A7CEC22A28898F00E0E2B1 /* NetworkService.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		38A7CEBF2A28877600E0E2B1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				38A7CEC02A28878F00E0E2B1 /* Extensions.swift */,
+				38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */,
+				38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */,
+				38A7CED72A28D1AB00E0E2B1 /* Helper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		38A7CEC82A288CAD00E0E2B1 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +363,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A7CED42A28BFF800E0E2B1 /* TransactionItemCell.xib in Resources */,
+				38A7CEB92A287CFD00E0E2B1 /* GMGTransactions.json in Resources */,
 				38A7CE8C2A287BB100E0E2B1 /* LaunchScreen.storyboard in Resources */,
 				38A7CE892A287BB100E0E2B1 /* Assets.xcassets in Resources */,
 				38A7CE872A287BAF00E0E2B1 /* Main.storyboard in Resources */,
@@ -322,9 +392,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A7CE842A287BAF00E0E2B1 /* ViewController.swift in Sources */,
+				38A7CEBB2A287D9800E0E2B1 /* TransactionListModel.swift in Sources */,
+				38A7CECC2A288E2100E0E2B1 /* AppStyles.swift in Sources */,
+				38A7CED62A28CB2F00E0E2B1 /* GMGDateFormatter.swift in Sources */,
+				38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */,
+				38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */,
+				38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */,
+				38A7CEBE2A287E9F00E0E2B1 /* NetworkManager.swift in Sources */,
+				38A7CECA2A288CE300E0E2B1 /* InternetConnectionView.swift in Sources */,
+				38A7CECE2A289F4100E0E2B1 /* TransactionListViewModel.swift in Sources */,
+				38A7CED32A28BFF800E0E2B1 /* TransactionItemCell.swift in Sources */,
 				38A7CE802A287BAF00E0E2B1 /* AppDelegate.swift in Sources */,
-				38A7CE822A287BAF00E0E2B1 /* SceneDelegate.swift in Sources */,
+				38A7CEC72A288C4A00E0E2B1 /* Reachability.swift in Sources */,
+				38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
