@@ -134,7 +134,6 @@
 				38A7CEAF2A287BDC00E0E2B1 /* TransactionDetail */,
 				38A7CEB32A287BDC00E0E2B1 /* TransactionsList */,
 				38A7CE7F2A287BAF00E0E2B1 /* AppDelegate.swift */,
-				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CE882A287BB100E0E2B1 /* Assets.xcassets */,
 				38A7CE8A2A287BB100E0E2B1 /* LaunchScreen.storyboard */,
 				38A7CE8D2A287BB100E0E2B1 /* Info.plist */,
@@ -260,6 +259,7 @@
 		38A7CEC82A288CAD00E0E2B1 /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
 			);
 			path = SharedViews;

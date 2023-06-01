@@ -29,6 +29,7 @@ extension AppDelegate{
         let transactionListVC = Helper.getMainStoryBoard.instantiateViewController(identifier: TransactionListVC.typeName, creator: { coder in
             TransactionListVC(coder: coder, viewModel: TransactionListViewModel())})
                 let rootVC = UINavigationController(rootViewController: transactionListVC)
+             rootVC.navigationBar.tintColor = .black
                 makeViewControllerRoot(rootVC)
     }
     
@@ -58,10 +59,11 @@ extension AppDelegate{
         guard let delegateWindow = UIApplication.shared.delegate?.window, let window = delegateWindow  else {
             return
         }
-
         viewController.view.frame = UIScreen.main.bounds
         viewController.view.layoutIfNeeded()
         window.rootViewController = viewController
     }
+    
+    
 }
 

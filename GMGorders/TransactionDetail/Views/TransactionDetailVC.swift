@@ -11,6 +11,7 @@ import Combine
 class TransactionDetailVC: UIViewController {
     
     @IBOutlet weak var partnerNameLabel: UILabel!
+    @IBOutlet weak var transactionDescriptionLabel: UILabel!
     private var viewModel : TransactionDetailViewModel!
     private var cancellables = Set<AnyCancellable>()
 
@@ -36,6 +37,7 @@ class TransactionDetailVC: UIViewController {
                     return
                 }
                 self.partnerNameLabel.text = item.partnerDisplayName
+                self.transactionDescriptionLabel.text = item.transactionDetail.description
             }.store(in: &cancellables)
     }
     
