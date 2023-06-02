@@ -39,6 +39,9 @@
 		38BAE61C2A29E3F300AC359C /* AmoutTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */; };
 		38BAE61E2A29E42C00AC359C /* AmoutTotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */; };
 		38BAE6212A29FC9B00AC359C /* Approuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6202A29FC9B00AC359C /* Approuter.swift */; };
+		38BAE6252A2A0F0300AC359C /* EmptySpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6232A2A0F0300AC359C /* EmptySpaceCell.swift */; };
+		38BAE6262A2A0F0300AC359C /* EmptySpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE6242A2A0F0300AC359C /* EmptySpaceCell.xib */; };
+		38BAE6282A2A14B500AC359C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6272A2A14B500AC359C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmoutTotalView.swift; sourceTree = "<group>"; };
 		38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmoutTotalView.xib; sourceTree = "<group>"; };
 		38BAE6202A29FC9B00AC359C /* Approuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Approuter.swift; sourceTree = "<group>"; };
+		38BAE6232A2A0F0300AC359C /* EmptySpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySpaceCell.swift; sourceTree = "<group>"; };
+		38BAE6242A2A0F0300AC359C /* EmptySpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptySpaceCell.xib; sourceTree = "<group>"; };
+		38BAE6272A2A14B500AC359C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +278,7 @@
 				38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */,
 				38A7CED72A28D1AB00E0E2B1 /* Helper.swift */,
 				38BAE6202A29FC9B00AC359C /* Approuter.swift */,
+				38BAE6272A2A14B500AC359C /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 		38A7CEC82A288CAD00E0E2B1 /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				38BAE6222A2A0EDF00AC359C /* EmptySpaceCell */,
 				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
 				38BAE6192A29E2EE00AC359C /* XibView.swift */,
@@ -330,6 +338,15 @@
 				38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */,
 			);
 			path = AmoutTotalView;
+			sourceTree = "<group>";
+		};
+		38BAE6222A2A0EDF00AC359C /* EmptySpaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				38BAE6232A2A0F0300AC359C /* EmptySpaceCell.swift */,
+				38BAE6242A2A0F0300AC359C /* EmptySpaceCell.xib */,
+			);
+			path = EmptySpaceCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +459,7 @@
 				38A7CE8C2A287BB100E0E2B1 /* LaunchScreen.storyboard in Resources */,
 				38A7CE892A287BB100E0E2B1 /* Assets.xcassets in Resources */,
 				38BAE61E2A29E42C00AC359C /* AmoutTotalView.xib in Resources */,
+				38BAE6262A2A0F0300AC359C /* EmptySpaceCell.xib in Resources */,
 				38A7CE872A287BAF00E0E2B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +496,7 @@
 				38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */,
 				38B040732A2931C500B34A03 /* FilterModel.swift in Sources */,
 				38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */,
+				38BAE6252A2A0F0300AC359C /* EmptySpaceCell.swift in Sources */,
 				38A7CEBE2A287E9F00E0E2B1 /* NetworkManager.swift in Sources */,
 				38A7CECA2A288CE300E0E2B1 /* InternetConnectionView.swift in Sources */,
 				38A7CECE2A289F4100E0E2B1 /* TransactionListViewModel.swift in Sources */,
@@ -489,6 +508,7 @@
 				38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */,
 				38BAE61A2A29E2EE00AC359C /* XibView.swift in Sources */,
 				38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */,
+				38BAE6282A2A14B500AC359C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

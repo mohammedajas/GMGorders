@@ -13,7 +13,10 @@ class FilterPickerVC: UIViewController {
     private var viewModel: FilterPickerViewModel!
     private var cancellables = Set<AnyCancellable>()
 
-
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var selectCategoryTitle: UILabel!
+    @IBOutlet weak var viewOrdersButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.dataSource = self
@@ -50,6 +53,10 @@ class FilterPickerVC: UIViewController {
     }
     
     private func bindViewModel(){
+        closeButton.setTitle(Constants.close, for: .normal)
+        resetButton.setTitle(Constants.resetFilter, for: .normal)
+        viewOrdersButton.setTitle(Constants.viewOrders, for: .normal)
+        selectCategoryTitle.text = Constants.selectCategories
         viewModel.$filterDataSource.receive(on: DispatchQueue.main).sink { [weak self] list in
             self?.tableView.reloadData()
         }.store(in: &cancellables)
@@ -65,8 +72,8 @@ extension FilterPickerVC : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(FilterItemCell.self, indexPath: indexPath)
         let model = viewModel.filterDataSource[indexPath.row]
-        cell.filterNameLabel.text = "\(model.categoryId) - Category"
-        cell.selectedStatusImageView.image = UIImage(named: model.isSelected ? "checkbox" : "unchecked")
+        cell.filterNameLabel.text = "\(model.categoryId)\(Constants.filteritemAppend)"
+        cell.selectedStatusImageView.image = UIImage(named: model.isSelected ? Constants.Images.checkbox :  Constants.Images.unchecked)
         return cell
     }
     

@@ -231,7 +231,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="paI-3S-30Y" id="exU-Z4-IQR"/>
+                        <outlet property="resetButton" destination="G7t-ZV-rbm" id="IZy-eb-XfT"/>
+                        <outlet property="selectCategoryTitle" destination="2CU-Ye-bz2" id="vwG-H6-tci"/>
                         <outlet property="tableView" destination="GaI-ft-PV1" id="z60-Hd-gBO"/>
+                        <outlet property="viewOrdersButton" destination="Aqf-IK-AHN" id="8Ve-aN-orc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sh-7c-QjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

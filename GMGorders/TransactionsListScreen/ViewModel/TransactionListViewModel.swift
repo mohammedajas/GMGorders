@@ -18,6 +18,7 @@ class TransactionListViewModel: ObservableObject {
     var showLoader = true
     var filterModelDataSources : [FilterModel] = []
     var appliedFilterCategoriesIds : [Int] = []
+    var errorText : String?
     var filterTransactionsTotalSum : String {
         guard  filterTransactions.count > 0 else{
             return ""
@@ -33,17 +34,19 @@ class TransactionListViewModel: ObservableObject {
         self.refeshView = true
         NetworkManager.shared.getData(endpoint: .transactionList, type: TransactionList.self)
             .sink { [weak self] completion in
-                self?.showLoader = false
-                self?.refeshView = true
+                guard let self = self else {return}
+                self.showLoader = false
+                self.refeshView = true
                 switch completion {
-                case .failure(let err):
-                    print("Error is \(err.localizedDescription)")
+                case .failure(_):
+                    self.errorText = Constants.networkError
                 case .finished:
-                    print("Finished")
+                    self.errorText = nil
                 }
             }
             receiveValue: { [weak self] transactionList in
                 guard let self = self else {return}
+                self.errorText = nil
                 let sortedList = transactionList.items.sorted(by: {
                     $0.formatedBookingDate.compare($1.formatedBookingDate) == .orderedDescending
                 })
@@ -53,7 +56,6 @@ class TransactionListViewModel: ObservableObject {
                 self.createFilterModel()
             }
             .store(in: &cancellables)
-        
         }
     
     private func createFilterModel(){

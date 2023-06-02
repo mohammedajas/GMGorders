@@ -20,6 +20,7 @@ class TransactionListVC: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.registerCell(TransactionItemCell.self)
+            tableView.registerCell(EmptySpaceCell.self)
         }
     }
     
@@ -34,7 +35,7 @@ class TransactionListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "My Orders"
+        self.title = Constants.transactionListTitle
         bindViewModel()
         
     }
@@ -70,10 +71,18 @@ class TransactionListVC: UIViewController {
 
 extension TransactionListVC : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.filterTransactions.count
+        return viewModel.filterTransactions.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if viewModel.filterTransactions.count == indexPath.row{
+            let cell = tableView.dequeueCell(EmptySpaceCell.self, indexPath: indexPath)
+            cell.emptyMessageLabel.text = viewModel.errorText ??  Constants.noOrdersToshow
+            cell.emptyMessageLabel.isHidden = (indexPath.row > 0) || viewModel.showLoader
+            return cell
+        }
+        
         let cell = tableView.dequeueCell(TransactionItemCell.self, indexPath: indexPath)
         let itemModel = viewModel.filterTransactions[indexPath.row]
         cell.namelabel.text = itemModel.partnerDisplayName

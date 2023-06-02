@@ -8,7 +8,7 @@
 import Foundation
 final class GMGDateFormatter {
     static func formatDateToShortDayMonthYearString(_ date: Date) -> String {
-        return dateFormatterWith(format: "EEEE, dd MMMM yyyy").string(from: date)
+        return dateFormatterWith(format: Constants.Formatter.dateFormatter).string(from: date)
     }
     fileprivate static func dateFormatterWith(format: String) -> DateFormatter {
         let dateFormatter = DateFormatter()
