@@ -287,10 +287,10 @@
 			isa = PBXGroup;
 			children = (
 				38BAE6222A2A0EDF00AC359C /* EmptySpaceCell */,
+				38BAE61F2A29E48300AC359C /* AmoutTotalView */,
 				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
 				38BAE6192A29E2EE00AC359C /* XibView.swift */,
-				38BAE61F2A29E48300AC359C /* AmoutTotalView */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";

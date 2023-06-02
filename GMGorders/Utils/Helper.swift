@@ -29,8 +29,7 @@ final class Helper{
 
 }
 
-
-class SafeAreaHelper {
+final class SafeAreaHelper {
     static func insets() -> UIEdgeInsets {
         var insets: UIEdgeInsets = .zero
         
