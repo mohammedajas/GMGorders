@@ -13,6 +13,7 @@ class TransactionListVC: UIViewController {
     private var viewModel: TransactionListViewModel!
     private var cancellables = Set<AnyCancellable>()
     @IBOutlet weak var filterIndicator: UIView!
+    @IBOutlet weak var amountTotalView: AmoutTotalView!
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.dataSource = self
@@ -52,6 +53,8 @@ class TransactionListVC: UIViewController {
         self.tableView.reloadData()
         _ =  self.viewModel.showLoader ? Helper.showLoader(viewController:self) : Helper.hideLoader(viewController:self)
         filterIndicator.isHidden =  !(viewModel.appliedFilterCategoriesIds.count > 0)
+        amountTotalView.isHidden = self.viewModel.filterTransactionsTotalSum.isEmpty
+        amountTotalView.totalAmountLabel.text = self.viewModel.filterTransactionsTotalSum
     }
     
     

@@ -35,6 +35,9 @@
 		38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B040742A2932CD00B34A03 /* FilterPickerViewModel.swift */; };
 		38BAE6172A29C3C900AC359C /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6152A29C3C900AC359C /* FilterItemCell.swift */; };
 		38BAE6182A29C3C900AC359C /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE6162A29C3C900AC359C /* FilterItemCell.xib */; };
+		38BAE61A2A29E2EE00AC359C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6192A29E2EE00AC359C /* XibView.swift */; };
+		38BAE61C2A29E3F300AC359C /* AmoutTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */; };
+		38BAE61E2A29E42C00AC359C /* AmoutTotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		38B040742A2932CD00B34A03 /* FilterPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerViewModel.swift; sourceTree = "<group>"; };
 		38BAE6152A29C3C900AC359C /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
 		38BAE6162A29C3C900AC359C /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
+		38BAE6192A29E2EE00AC359C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmoutTotalView.swift; sourceTree = "<group>"; };
+		38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmoutTotalView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +278,8 @@
 			children = (
 				38A7CE852A287BAF00E0E2B1 /* Main.storyboard */,
 				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
+				38BAE6192A29E2EE00AC359C /* XibView.swift */,
+				38BAE61F2A29E48300AC359C /* AmoutTotalView */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -310,6 +318,15 @@
 				38BAE6162A29C3C900AC359C /* FilterItemCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		38BAE61F2A29E48300AC359C /* AmoutTotalView */ = {
+			isa = PBXGroup;
+			children = (
+				38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */,
+				38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */,
+			);
+			path = AmoutTotalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +438,7 @@
 				38A7CEB92A287CFD00E0E2B1 /* GMGTransactions.json in Resources */,
 				38A7CE8C2A287BB100E0E2B1 /* LaunchScreen.storyboard in Resources */,
 				38A7CE892A287BB100E0E2B1 /* Assets.xcassets in Resources */,
+				38BAE61E2A29E42C00AC359C /* AmoutTotalView.xib in Resources */,
 				38A7CE872A287BAF00E0E2B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +471,7 @@
 				38A7CED62A28CB2F00E0E2B1 /* GMGDateFormatter.swift in Sources */,
 				38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */,
 				38A7CEDC2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift in Sources */,
+				38BAE61C2A29E3F300AC359C /* AmoutTotalView.swift in Sources */,
 				38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */,
 				38B040732A2931C500B34A03 /* FilterModel.swift in Sources */,
 				38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */,
@@ -464,6 +483,7 @@
 				38A7CE802A287BAF00E0E2B1 /* AppDelegate.swift in Sources */,
 				38A7CEC72A288C4A00E0E2B1 /* Reachability.swift in Sources */,
 				38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */,
+				38BAE61A2A29E2EE00AC359C /* XibView.swift in Sources */,
 				38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,6 +22,19 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tOJ-uD-jOQ">
+                                <rect key="frame" x="10" y="731" width="293" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-Fn-cE5" customClass="AmoutTotalView" customModule="GMGorders" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="zoN-yY-u02"/>
+                                </constraints>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIM-yh-ksZ">
                                 <rect key="frame" x="313" y="738" width="50" height="50"/>
                                 <subviews>
@@ -90,13 +103,17 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RGs-Xa-chw" secondAttribute="bottom" id="87x-eL-eQi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGs-Xa-chw" secondAttribute="trailing" id="Ex1-Dc-Nca"/>
+                            <constraint firstItem="tOJ-uD-jOQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="OqZ-JR-6au"/>
                             <constraint firstItem="RGs-Xa-chw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oyu-13-M4U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cIM-yh-ksZ" secondAttribute="bottom" constant="30" id="Pub-Y7-gki"/>
                             <constraint firstItem="RGs-Xa-chw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RoG-6y-oIa"/>
+                            <constraint firstItem="tOJ-uD-jOQ" firstAttribute="centerY" secondItem="cIM-yh-ksZ" secondAttribute="centerY" id="cJZ-hb-op8"/>
+                            <constraint firstItem="cIM-yh-ksZ" firstAttribute="leading" secondItem="tOJ-uD-jOQ" secondAttribute="trailing" constant="10" id="h1p-0w-Y67"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cIM-yh-ksZ" secondAttribute="trailing" constant="30" id="yVS-Gh-BhQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountTotalView" destination="0qK-Fn-cE5" id="uYn-tq-Y4H"/>
                         <outlet property="filterIndicator" destination="5ZT-T6-lpb" id="08X-ci-ltV"/>
                         <outlet property="tableView" destination="RGs-Xa-chw" id="kro-hZ-Jej"/>
                     </connections>

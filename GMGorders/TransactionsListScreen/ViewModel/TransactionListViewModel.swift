@@ -18,7 +18,15 @@ class TransactionListViewModel: ObservableObject {
     var showLoader = true
     var filterModelDataSources : [FilterModel] = []
     var appliedFilterCategoriesIds : [Int] = []
-    
+    var filterTransactionsTotalSum : String {
+        guard  filterTransactions.count > 0 else{
+            return ""
+        }
+        let sum =  filterTransactions.reduce(0.0) { partialResult, item in
+            partialResult + item.transactionDetail.value.amount
+        }
+        return  filterTransactions.first!.transactionDetail.value.currency.rawValue + " " + String(format: "%.2f", sum)
+    }
 
     func getTransactionList() {
         self.showLoader = true
