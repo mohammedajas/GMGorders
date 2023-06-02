@@ -20,7 +20,7 @@ struct Transaction: Decodable {
     
     var formatedBookingDate : Date{
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: Constants.Formatter.localeFormatter)
+        dateFormatter.locale = Locale(identifier: Constants.Formatter.localeEnFormatter)
         dateFormatter.dateFormat = Constants.Formatter.apiFormatter
         let date = dateFormatter.date(from:transactionDetail.bookingDate)!
         return date

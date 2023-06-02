@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Constants {
     private init(){
         
@@ -23,7 +24,7 @@ struct Constants {
     
     struct Formatter{
         static let dateFormatter = "EEEE, dd MMMM yyyy"
-        static let localeFormatter = "en_US_POSIX"
+        static let localeEnFormatter = "en_US_POSIX"
         static let apiFormatter =  "yyyy-MM-dd'T'HH:mm:ssZ"
     }
     

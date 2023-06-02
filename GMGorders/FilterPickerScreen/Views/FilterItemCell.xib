@@ -13,7 +13,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterItemCell" rowHeight="71" id="KGk-i7-Jjw" customClass="FilterItemCell" customModule="GMGorders" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -38,7 +38,7 @@
                     <constraint firstItem="TyH-FD-K86" firstAttribute="centerY" secondItem="avH-Fs-xwB" secondAttribute="centerY" id="2fr-dQ-bAz"/>
                     <constraint firstItem="avH-Fs-xwB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="CqU-56-aZB"/>
                     <constraint firstItem="TyH-FD-K86" firstAttribute="leading" secondItem="avH-Fs-xwB" secondAttribute="trailing" constant="5" id="DJG-uE-hxb"/>
-                    <constraint firstAttribute="bottom" secondItem="avH-Fs-xwB" secondAttribute="bottom" constant="15" id="O83-Qp-PSe"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="avH-Fs-xwB" secondAttribute="bottom" constant="15" id="O83-Qp-PSe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
