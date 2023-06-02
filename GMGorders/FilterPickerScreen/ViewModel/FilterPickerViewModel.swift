@@ -27,7 +27,7 @@ class FilterPickerViewModel: ObservableObject {
             item.categoryId == itemId
         }){
             filterDataSource[index].toggle()
-      }
+        }
     }
-
+    
 }

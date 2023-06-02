@@ -38,12 +38,12 @@ class NetworkManager {
     func getData<T: Decodable>(endpoint: Endpoint, type: T.Type) -> Future<T, Error> {
         
         let endPointUrl = getEndPointUrl(endpoint: endpoint)
-    
+        
         return Future<T, Error> { [weak self] promise in
             guard let self = self, let url = URL(string: endPointUrl) else {
                 return promise(.failure(NetworkError.invalidURL))
             }
-        
+            
             if self.mockEnabled {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                     if let mockTransactions = self.mockJsonfileName.readLocalJsonFile(),
@@ -83,22 +83,22 @@ class NetworkManager {
         
     }
 }
-    
-    enum NetworkError: Error {
-        case invalidURL
-        case responseError
-        case unknown
-    }
-    
-    extension NetworkError: LocalizedError {
-        var errorDescription: String? {
-            switch self {
-            case .invalidURL:
-                return NSLocalizedString("Invalid URL", comment: "Invalid URL")
-            case .responseError:
-                return NSLocalizedString("Unexpected status code", comment: "Invalid response")
-            case .unknown:
-                return NSLocalizedString("Unknown error", comment: "Unknown error")
-            }
+
+enum NetworkError: Error {
+    case invalidURL
+    case responseError
+    case unknown
+}
+
+extension NetworkError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return NSLocalizedString("Invalid URL", comment: "Invalid URL")
+        case .responseError:
+            return NSLocalizedString("Unexpected status code", comment: "Invalid response")
+        case .unknown:
+            return NSLocalizedString("Unknown error", comment: "Unknown error")
         }
     }
+}

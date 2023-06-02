@@ -14,17 +14,17 @@ class TransactionDetailVC: UIViewController {
     @IBOutlet weak var transactionDescriptionLabel: UILabel!
     private var viewModel : TransactionDetailViewModel!
     private var cancellables = Set<AnyCancellable>()
-
     
-      init(coder:NSCoder,viewModel: TransactionDetailViewModel) {
-          self.viewModel = viewModel
-          super.init(coder: coder)!
-      }
-      
-      required init?(coder: NSCoder) {
-            super.init(coder: coder)
-         }
-
+    
+    init(coder:NSCoder,viewModel: TransactionDetailViewModel) {
+        self.viewModel = viewModel
+        super.init(coder: coder)!
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
@@ -41,5 +41,5 @@ class TransactionDetailVC: UIViewController {
             }.store(in: &cancellables)
     }
     
-
+    
 }

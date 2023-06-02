@@ -8,12 +8,12 @@
 import UIKit
 
 class EmptySpaceCell: UITableViewCell {
-
+    
     @IBOutlet weak var emptyMessageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     
 }

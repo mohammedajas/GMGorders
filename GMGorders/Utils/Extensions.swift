@@ -14,7 +14,7 @@ extension String{
         do {
             if let bundlePath = Bundle.main.path(forResource: self,
                                                  ofType: "json"),
-                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+               let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 return jsonData
             }
         } catch {
@@ -28,14 +28,14 @@ extension String{
 
 extension Data{
     
-     func jsonParser<T: Decodable>(type: T.Type) -> T?{
-         let decoder = JSONDecoder()
-         do {
-             let model = try decoder.decode(T.self, from: self)
-             return model
-         } catch {
-             print(String(describing: error))
-         }
+    func jsonParser<T: Decodable>(type: T.Type) -> T?{
+        let decoder = JSONDecoder()
+        do {
+            let model = try decoder.decode(T.self, from: self)
+            return model
+        } catch {
+            print(String(describing: error))
+        }
         return nil
     }
 }
@@ -60,7 +60,7 @@ extension UIView: NibRepresentable {
     class var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
-
+    
     class var identifier: String {
         return String(describing: self)
     }
@@ -72,11 +72,11 @@ extension UITableView {
             withIdentifier: type.identifier,
             for: indexPath) as! T
     }
-
+    
     func registerCell<T: UITableViewCell>(_ type: T.Type) {
         self.register(type.nib, forCellReuseIdentifier: type.identifier)
     }
-
+    
 }
 
 
@@ -88,35 +88,35 @@ extension UIColor {
 
 
 extension UIView {
-
-  @IBInspectable var cornerRadius: CGFloat {
-
-   get{
-        return layer.cornerRadius
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        
+        get{
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
     }
-    set {
-        layer.cornerRadius = newValue
-        layer.masksToBounds = newValue > 0
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
     }
-  }
-
-  @IBInspectable var borderWidth: CGFloat {
-    get {
-        return layer.borderWidth
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
     }
-    set {
-        layer.borderWidth = newValue
-    }
-  }
-
-  @IBInspectable var borderColor: UIColor? {
-    get {
-        return UIColor(cgColor: layer.borderColor!)
-    }
-    set {
-        layer.borderColor = newValue?.cgColor
-    }
-  }
 }
 
 
@@ -129,7 +129,7 @@ extension NameDescribable {
     var typeName: String {
         return String(describing: type(of: self))
     }
-
+    
     static var typeName: String {
         return String(describing: self)
     }

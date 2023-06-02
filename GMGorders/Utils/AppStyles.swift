@@ -27,7 +27,7 @@ class AppStyles {
         class var green: UIColor {
             return UIColor(r: 6, g: 167, b: 87, a: 1.0)
         }
-
+        
         
     }
 }

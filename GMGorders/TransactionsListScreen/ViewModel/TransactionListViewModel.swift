@@ -28,7 +28,7 @@ class TransactionListViewModel: ObservableObject {
         }
         return  filterTransactions.first!.transactionDetail.value.currency.rawValue + " " + String(format: "%.2f", sum)
     }
-
+    
     func getTransactionList() {
         self.showLoader = true
         self.refeshView = true
@@ -44,25 +44,25 @@ class TransactionListViewModel: ObservableObject {
                     self.errorText = nil
                 }
             }
-            receiveValue: { [weak self] transactionList in
-                guard let self = self else {return}
-                self.errorText = nil
-                let sortedList = transactionList.items.sorted(by: {
-                    $0.formatedBookingDate.compare($1.formatedBookingDate) == .orderedDescending
-                })
-                
-                self.completeTransactions = sortedList
-                self.filterTransactions = sortedList
-                self.createFilterModel()
-            }
-            .store(in: &cancellables)
-        }
+    receiveValue: { [weak self] transactionList in
+        guard let self = self else {return}
+        self.errorText = nil
+        let sortedList = transactionList.items.sorted(by: {
+            $0.formatedBookingDate.compare($1.formatedBookingDate) == .orderedDescending
+        })
+        
+        self.completeTransactions = sortedList
+        self.filterTransactions = sortedList
+        self.createFilterModel()
+    }
+    .store(in: &cancellables)
+    }
     
     private func createFilterModel(){
         self.filterModelDataSources = Set(completeTransactions.map { $0.category }).map { categoryId in
             let alreadyApplied = (appliedFilterCategoriesIds.first { $0 == categoryId} != nil)
             let filterModel = FilterModel(categoryId: categoryId,isSelected: alreadyApplied)
-           return filterModel
+            return filterModel
         }.sorted(by: {$0.categoryId < $1.categoryId})
     }
     
@@ -74,7 +74,7 @@ class TransactionListViewModel: ObservableObject {
                 if #available(iOS 16.0, *) {
                     return appliedFilterCategoriesIds.contains([item.category])
                 } else {
-                   return (appliedFilterCategoriesIds.first { $0 == item.category} != nil)
+                    return (appliedFilterCategoriesIds.first { $0 == item.category} != nil)
                 }
             })
         }

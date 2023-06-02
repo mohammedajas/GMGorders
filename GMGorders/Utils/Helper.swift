@@ -24,9 +24,9 @@ final class Helper{
     
     static var getMainStoryBoard  : UIStoryboard{
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-      return mainStoryBoard
+        return mainStoryBoard
     }
-
+    
 }
 
 final class SafeAreaHelper {

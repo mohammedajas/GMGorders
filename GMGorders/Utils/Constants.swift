@@ -11,16 +11,16 @@ struct Constants {
     private init(){
         
     }
-     static let noOrdersToshow = "No orders to show"
-     static let networkError =  "Something went Wrong"
-     static let transactionListTitle = "My Orders"
-     static let totalSum = "Orders Total Sum"
-     static let close = "Close"
-     static let resetFilter = "Reset Filter"
-     static let viewOrders = "View Orders"
-     static let selectCategories = "Select the Categories"
-     static let filteritemAppend = " - Category"
-     static let waitText = "Please wait..."
+    static let noOrdersToshow = "No orders to show"
+    static let networkError =  "Something went Wrong"
+    static let transactionListTitle = "My Orders"
+    static let totalSum = "Orders Total Sum"
+    static let close = "Close"
+    static let resetFilter = "Reset Filter"
+    static let viewOrders = "View Orders"
+    static let selectCategories = "Select the Categories"
+    static let filteritemAppend = " - Category"
+    static let waitText = "Please wait..."
     
     struct Formatter{
         static let dateFormatter = "EEEE, dd MMMM yyyy"
@@ -33,4 +33,4 @@ struct Constants {
         static let unchecked = "unchecked"
     }
     
- }
+}

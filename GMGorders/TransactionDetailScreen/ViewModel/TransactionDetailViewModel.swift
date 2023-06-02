@@ -15,5 +15,5 @@ class TransactionDetailViewModel: ObservableObject {
     init(transaction: Transaction) {
         self.transaction = transaction
     }
-
+    
 }

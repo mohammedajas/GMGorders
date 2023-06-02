@@ -63,7 +63,7 @@ class TransactionListVC: UIViewController {
     
     @IBAction func filterButtonAction(_ sender: UIButton) {
         AppRouter.shared.navigateToListFilter(currrentViewController: self, filterModelDataSources: self.viewModel.filterModelDataSources, delegate: self.viewModel, navigationType: .present)
-    
+        
     }
     
 }
@@ -96,7 +96,7 @@ extension TransactionListVC : UITableViewDataSource,UITableViewDelegate{
         AppRouter.shared.navigateTransactionDetail(currrentViewController: self,
                                                    transaction: self.viewModel.filterTransactions[indexPath.row],
                                                    navigationType: .push)
-    
+        
     }
     
     
