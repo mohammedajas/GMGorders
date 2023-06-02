@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class FilterPickerViewModel: ObservableObject {
+class FilterPickerViewModel {
     @Published var filterDataSource : [FilterModel]
     weak var filterDelegate : FilterAppliedProtocol?
     

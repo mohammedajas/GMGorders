@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 
-class TransactionDetailViewModel: ObservableObject {
+class TransactionDetailViewModel {
     @Published var transaction : Transaction
     
     init(transaction: Transaction) {

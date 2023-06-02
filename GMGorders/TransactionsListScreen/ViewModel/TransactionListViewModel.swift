@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 
-class TransactionListViewModel: ObservableObject {
+class TransactionListViewModel {
     
     private var completeTransactions = [Transaction]()
     private var cancellables = Set<AnyCancellable>()
