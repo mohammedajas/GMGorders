@@ -38,6 +38,7 @@
 		38BAE61A2A29E2EE00AC359C /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6192A29E2EE00AC359C /* XibView.swift */; };
 		38BAE61C2A29E3F300AC359C /* AmoutTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */; };
 		38BAE61E2A29E42C00AC359C /* AmoutTotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */; };
+		38BAE6212A29FC9B00AC359C /* Approuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6202A29FC9B00AC359C /* Approuter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		38BAE6192A29E2EE00AC359C /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		38BAE61B2A29E3F300AC359C /* AmoutTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmoutTotalView.swift; sourceTree = "<group>"; };
 		38BAE61D2A29E42C00AC359C /* AmoutTotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmoutTotalView.xib; sourceTree = "<group>"; };
+		38BAE6202A29FC9B00AC359C /* Approuter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Approuter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */,
 				38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */,
 				38A7CED72A28D1AB00E0E2B1 /* Helper.swift */,
+				38BAE6202A29FC9B00AC359C /* Approuter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				38B040712A292E7000B34A03 /* FilterPickerVC.swift in Sources */,
 				38A7CE802A287BAF00E0E2B1 /* AppDelegate.swift in Sources */,
 				38A7CEC72A288C4A00E0E2B1 /* Reachability.swift in Sources */,
+				38BAE6212A29FC9B00AC359C /* Approuter.swift in Sources */,
 				38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */,
 				38BAE61A2A29E2EE00AC359C /* XibView.swift in Sources */,
 				38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */,

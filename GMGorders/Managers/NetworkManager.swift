@@ -46,7 +46,7 @@ class NetworkManager {
         
             if self.mockEnabled {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    if let mockTransactions = self.mockJsonfileName.readLocalFile(),
+                    if let mockTransactions = self.mockJsonfileName.readLocalJsonFile(),
                        let mockModel = mockTransactions.jsonParser(type: T.self){
                         promise(.success(mockModel))
                     }else{

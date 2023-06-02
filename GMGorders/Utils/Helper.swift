@@ -28,3 +28,23 @@ final class Helper{
     }
 
 }
+
+
+class SafeAreaHelper {
+    static func insets() -> UIEdgeInsets {
+        var insets: UIEdgeInsets = .zero
+        
+        let window = UIApplication
+            .shared
+            .connectedScenes
+            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+            .last { $0.isKeyWindow }
+        
+        if  window != nil {
+            insets = window!.safeAreaInsets
+        }
+        return insets
+    }
+}
+
+

@@ -14,6 +14,7 @@ class TransactionListVC: UIViewController {
     private var cancellables = Set<AnyCancellable>()
     @IBOutlet weak var filterIndicator: UIView!
     @IBOutlet weak var amountTotalView: AmoutTotalView!
+    @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.dataSource = self
@@ -52,6 +53,7 @@ class TransactionListVC: UIViewController {
     private func refreshMyView(){
         self.tableView.reloadData()
         _ =  self.viewModel.showLoader ? Helper.showLoader(viewController:self) : Helper.hideLoader(viewController:self)
+        filterView.isHidden = self.viewModel.filterTransactions.isEmpty
         filterIndicator.isHidden =  !(viewModel.appliedFilterCategoriesIds.count > 0)
         amountTotalView.isHidden = self.viewModel.filterTransactionsTotalSum.isEmpty
         amountTotalView.totalAmountLabel.text = self.viewModel.filterTransactionsTotalSum
@@ -59,19 +61,8 @@ class TransactionListVC: UIViewController {
     
     
     @IBAction func filterButtonAction(_ sender: UIButton) {
-        
-        let filterVC = Helper.getMainStoryBoard.instantiateViewController(identifier: FilterPickerVC.typeName,
-         creator: { coder in
-            FilterPickerVC(coder: coder, viewModel: FilterPickerViewModel(filterDataSource: self.viewModel.filterModelDataSources,
-                                                                          delegate: self.viewModel))
-        })
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.present(filterVC, animated: true)
-        }
+        AppRouter.shared.navigateToListFilter(currrentViewController: self, filterModelDataSources: self.viewModel.filterModelDataSources, delegate: self.viewModel, navigationType: .present)
+    
     }
     
 }
@@ -93,19 +84,10 @@ extension TransactionListVC : UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let transactionDetailVC = Helper.getMainStoryBoard.instantiateViewController(identifier: TransactionDetailVC.typeName,
-         creator: { coder in
-            TransactionDetailVC(coder: coder,
-                                viewModel: TransactionDetailViewModel(transaction: self.viewModel.filterTransactions[indexPath.row]))
-        })
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.navigationController?.pushViewController(transactionDetailVC, animated: true)
-        }
+        AppRouter.shared.navigateTransactionDetail(currrentViewController: self,
+                                                   transaction: self.viewModel.filterTransactions[indexPath.row],
+                                                   navigationType: .push)
+    
     }
     
     

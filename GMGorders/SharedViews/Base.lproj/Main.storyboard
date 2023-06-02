@@ -115,6 +115,7 @@
                     <connections>
                         <outlet property="amountTotalView" destination="0qK-Fn-cE5" id="uYn-tq-Y4H"/>
                         <outlet property="filterIndicator" destination="5ZT-T6-lpb" id="08X-ci-ltV"/>
+                        <outlet property="filterView" destination="cIM-yh-ksZ" id="Zfm-I6-oej"/>
                         <outlet property="tableView" destination="RGs-Xa-chw" id="kro-hZ-Jej"/>
                     </connections>
                 </viewController>

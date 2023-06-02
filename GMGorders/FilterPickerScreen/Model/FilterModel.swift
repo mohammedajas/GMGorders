@@ -15,3 +15,8 @@ struct FilterModel {
         self.isSelected = !isSelected
     }
 }
+
+
+protocol FilterAppliedProtocol : AnyObject{
+    func appliedFliterItems(categoriesIds : [Int])
+}

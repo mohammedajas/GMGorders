@@ -10,7 +10,7 @@ import UIKit
 
 extension String{
     
-    func readLocalFile() -> Data? {
+    func readLocalJsonFile() -> Data? {
         do {
             if let bundlePath = Bundle.main.path(forResource: self,
                                                  ofType: "json"),
@@ -85,26 +85,6 @@ extension UIColor {
         self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
     }
 }
-
-
-class SafeAreaHelper {
-    static func insets() -> UIEdgeInsets {
-        var insets: UIEdgeInsets = .zero
-        
-        let window = UIApplication
-            .shared
-            .connectedScenes
-            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-            .last { $0.isKeyWindow }
-        
-        if  window != nil {
-            insets = window!.safeAreaInsets
-        }
-        return insets
-    }
-}
-
-
 
 
 extension UIView {

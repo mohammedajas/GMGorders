@@ -8,10 +8,6 @@
 import Foundation
 import Combine
 
-protocol FilterAppliedProtocol : AnyObject{
-    func appliedFliterItems(categoriesIds : [Int])
-}
-
 class FilterPickerViewModel: ObservableObject {
     @Published var filterDataSource : [FilterModel]
     weak var filterDelegate : FilterAppliedProtocol?
