@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct TransactionList: Codable {
+struct TransactionList: Decodable {
     let items: [Transaction]
 }
 
 // MARK: - Item
-struct Transaction: Codable {
+struct Transaction: Decodable {
     let partnerDisplayName: String
     let alias: Alias
     let category: Int
@@ -25,26 +25,30 @@ struct Transaction: Codable {
         let date = dateFormatter.date(from:transactionDetail.bookingDate)!
         return date
     }
+    
+    var regionalCurrency : String{
+        return transactionDetail.value.currency.rawValue + " " + String(format: "%.2f", transactionDetail.value.amount)
+    }
 }
 
 // MARK: - Alias
-struct Alias: Codable {
+struct Alias: Decodable {
     let reference: String
 }
 
 // MARK: - TransactionDetail
-struct TransactionDetail: Codable {
+struct TransactionDetail: Decodable {
     let description: String?
     let bookingDate: String
     let value: Value
 }
 
 // MARK: - Value
-struct Value: Codable {
-    let amount: Int
+struct Value: Decodable {
+    let amount: Double
     let currency: Currency
 }
 
-enum Currency: String, Codable {
+enum Currency: String, Decodable {
     case aed = "AED"
 }

@@ -30,6 +30,11 @@
 		38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED72A28D1AB00E0E2B1 /* Helper.swift */; };
 		38A7CEDA2A28D66500E0E2B1 /* TransactionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CED92A28D66500E0E2B1 /* TransactionDetailVC.swift */; };
 		38A7CEDC2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A7CEDB2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift */; };
+		38B040712A292E7000B34A03 /* FilterPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B040702A292E7000B34A03 /* FilterPickerVC.swift */; };
+		38B040732A2931C500B34A03 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B040722A2931C500B34A03 /* FilterModel.swift */; };
+		38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B040742A2932CD00B34A03 /* FilterPickerViewModel.swift */; };
+		38BAE6172A29C3C900AC359C /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAE6152A29C3C900AC359C /* FilterItemCell.swift */; };
+		38BAE6182A29C3C900AC359C /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BAE6162A29C3C900AC359C /* FilterItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		38A7CED72A28D1AB00E0E2B1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		38A7CED92A28D66500E0E2B1 /* TransactionDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailVC.swift; sourceTree = "<group>"; };
 		38A7CEDB2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		38B040702A292E7000B34A03 /* FilterPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerVC.swift; sourceTree = "<group>"; };
+		38B040722A2931C500B34A03 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		38B040742A2932CD00B34A03 /* FilterPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerViewModel.swift; sourceTree = "<group>"; };
+		38BAE6152A29C3C900AC359C /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
+		38BAE6162A29C3C900AC359C /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +141,9 @@
 				38A7CEBC2A287E8500E0E2B1 /* Managers */,
 				38A7CEB72A287CEB00E0E2B1 /* MockResources */,
 				38A7CEC82A288CAD00E0E2B1 /* SharedViews */,
-				38A7CEAF2A287BDC00E0E2B1 /* TransactionDetail */,
-				38A7CEB32A287BDC00E0E2B1 /* TransactionsList */,
+				38A7CEAF2A287BDC00E0E2B1 /* TransactionDetailScreen */,
+				38A7CEB32A287BDC00E0E2B1 /* TransactionsListScreen */,
+				38B0406C2A292E0B00B34A03 /* FilterPickerScreen */,
 				38A7CE7F2A287BAF00E0E2B1 /* AppDelegate.swift */,
 				38A7CE882A287BB100E0E2B1 /* Assets.xcassets */,
 				38A7CE8A2A287BB100E0E2B1 /* LaunchScreen.storyboard */,
@@ -158,14 +169,14 @@
 			path = GMGordersUITests;
 			sourceTree = "<group>";
 		};
-		38A7CEAF2A287BDC00E0E2B1 /* TransactionDetail */ = {
+		38A7CEAF2A287BDC00E0E2B1 /* TransactionDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
 				38A7CEB12A287BDC00E0E2B1 /* Model */,
 				38A7CEB02A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB22A287BDC00E0E2B1 /* Views */,
 			);
-			path = TransactionDetail;
+			path = TransactionDetailScreen;
 			sourceTree = "<group>";
 		};
 		38A7CEB02A287BDC00E0E2B1 /* ViewModel */ = {
@@ -191,14 +202,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		38A7CEB32A287BDC00E0E2B1 /* TransactionsList */ = {
+		38A7CEB32A287BDC00E0E2B1 /* TransactionsListScreen */ = {
 			isa = PBXGroup;
 			children = (
 				38A7CEB52A287BDC00E0E2B1 /* Model */,
 				38A7CEB42A287BDC00E0E2B1 /* ViewModel */,
 				38A7CEB62A287BDC00E0E2B1 /* Views */,
 			);
-			path = TransactionsList;
+			path = TransactionsListScreen;
 			sourceTree = "<group>";
 		};
 		38A7CEB42A287BDC00E0E2B1 /* ViewModel */ = {
@@ -263,6 +274,42 @@
 				38A7CEC92A288CE300E0E2B1 /* InternetConnectionView.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		38B0406C2A292E0B00B34A03 /* FilterPickerScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38B0406D2A292E2800B34A03 /* Model */,
+				38B0406E2A292E2E00B34A03 /* ViewModel */,
+				38B0406F2A292E3500B34A03 /* Views */,
+			);
+			path = FilterPickerScreen;
+			sourceTree = "<group>";
+		};
+		38B0406D2A292E2800B34A03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38B040722A2931C500B34A03 /* FilterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38B0406E2A292E2E00B34A03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38B040742A2932CD00B34A03 /* FilterPickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38B0406F2A292E3500B34A03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38B040702A292E7000B34A03 /* FilterPickerVC.swift */,
+				38BAE6152A29C3C900AC359C /* FilterItemCell.swift */,
+				38BAE6162A29C3C900AC359C /* FilterItemCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +416,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BAE6182A29C3C900AC359C /* FilterItemCell.xib in Resources */,
 				38A7CED42A28BFF800E0E2B1 /* TransactionItemCell.xib in Resources */,
 				38A7CEB92A287CFD00E0E2B1 /* GMGTransactions.json in Resources */,
 				38A7CE8C2A287BB100E0E2B1 /* LaunchScreen.storyboard in Resources */,
@@ -398,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BAE6172A29C3C900AC359C /* FilterItemCell.swift in Sources */,
 				38A7CEDA2A28D66500E0E2B1 /* TransactionDetailVC.swift in Sources */,
 				38A7CEBB2A287D9800E0E2B1 /* TransactionListModel.swift in Sources */,
 				38A7CECC2A288E2100E0E2B1 /* AppStyles.swift in Sources */,
@@ -405,13 +454,16 @@
 				38A7CED82A28D1AB00E0E2B1 /* Helper.swift in Sources */,
 				38A7CEDC2A28D7EF00E0E2B1 /* TransactionDetailViewModel.swift in Sources */,
 				38A7CEC12A28878F00E0E2B1 /* Extensions.swift in Sources */,
+				38B040732A2931C500B34A03 /* FilterModel.swift in Sources */,
 				38A7CE842A287BAF00E0E2B1 /* TransactionListVC.swift in Sources */,
 				38A7CEBE2A287E9F00E0E2B1 /* NetworkManager.swift in Sources */,
 				38A7CECA2A288CE300E0E2B1 /* InternetConnectionView.swift in Sources */,
 				38A7CECE2A289F4100E0E2B1 /* TransactionListViewModel.swift in Sources */,
 				38A7CED32A28BFF800E0E2B1 /* TransactionItemCell.swift in Sources */,
+				38B040712A292E7000B34A03 /* FilterPickerVC.swift in Sources */,
 				38A7CE802A287BAF00E0E2B1 /* AppDelegate.swift in Sources */,
 				38A7CEC72A288C4A00E0E2B1 /* Reachability.swift in Sources */,
+				38B040752A2932CD00B34A03 /* FilterPickerViewModel.swift in Sources */,
 				38A7CEC32A28898F00E0E2B1 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
