@@ -274,10 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				38A7CEC02A28878F00E0E2B1 /* Extensions.swift */,
-				38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */,
 				38A7CED52A28CB2F00E0E2B1 /* GMGDateFormatter.swift */,
 				38A7CED72A28D1AB00E0E2B1 /* Helper.swift */,
 				38BAE6202A29FC9B00AC359C /* Approuter.swift */,
+				38A7CECB2A288E2100E0E2B1 /* AppStyles.swift */,
 				38BAE6272A2A14B500AC359C /* Constants.swift */,
 			);
 			path = Utils;
