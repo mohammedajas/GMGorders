@@ -87,7 +87,7 @@ extension TransactionListVC : UITableViewDataSource,UITableViewDelegate{
         let itemModel = viewModel.filterTransactions[indexPath.row]
         cell.namelabel.text = itemModel.partnerDisplayName
         cell.bookingDateLabel.text = GMGDateFormatter.formatDateToShortDayMonthYearString(itemModel.formatedBookingDate)
-        cell.amountLabel.text = itemModel.regionalCurrency
+        cell.amountLabel.text = itemModel.AmountInCurrency
         cell.descriptionLabel.text = itemModel.transactionDetail.description
         return cell
     }

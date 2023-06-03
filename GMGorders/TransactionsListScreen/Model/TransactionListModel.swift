@@ -26,7 +26,7 @@ struct Transaction: Decodable {
         return date
     }
     
-    var regionalCurrency : String{
+    var AmountInCurrency : String{
         return transactionDetail.value.currency.rawValue + " " + String(format: "%.2f", transactionDetail.value.amount)
     }
 }
